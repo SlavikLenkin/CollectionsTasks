@@ -9,7 +9,7 @@
 
 **TestCollections**
 
-ArrayList and LinkedList:
+**ArrayList and LinkedList:**
 
 ![](https://github.com/SlavikLenkin/CollectionsTasks/blob/main/list/add%2050000.jpg)
 
@@ -54,4 +54,50 @@ Set elements to begin ->  ArrayList is faster
 ![](https://github.com/SlavikLenkin/CollectionsTasks/blob/main/list/set%20middle%2050000.jpg)
 
 Set elements to middle ->  ArrayList is faster
+
+Выводы: 
+
+1)LinkedList быстрее, чем ArrayList, добавляет элементы в начало списка.
+
+2)Удаление из начала списка LinkedList осуществляет быстрее.
+
+3)В остальных случаях лучше ArrayList.
+
+**HashSet LinkedHashSet TreeSet**
+
+![](https://github.com/SlavikLenkin/CollectionsTasks/blob/main/Set/add%2050000.jpg)
+
+Add elements -> HashSet is faster
+
+![](https://github.com/SlavikLenkin/CollectionsTasks/blob/main/Set/remove%2050000.jpg)
+
+Remove elements -> LinkedHashSet is faster
+
+Выводы:
+
+1)HashSet дает лучшую производительность при добавлении элементов.
+
+2)LinkedHashSet показывает лучший результат на удалении элементов.
+
+
+
+**HashMap LinkedHashMap TreeMap**
+
+![](https://github.com/SlavikLenkin/CollectionsTasks/blob/main/map/add%2050000.jpg)
+
+Add elements -> HashSet is faster
+
+![](https://github.com/SlavikLenkin/CollectionsTasks/blob/main/map/get%2050000.jpg)
+
+Get elements -> LinkedHasMap is faster
+
+![](https://github.com/SlavikLenkin/CollectionsTasks/blob/main/map/remove%2050000.jpg)
+
+Remove elements -> LinkedHashSet is faster
+
+Выводы:
+
+1) HashMap  дает лучшую производительность при добавлении элементов.
+
+2) При удалении и получении элементов самую высокую скорость показала LinkedHashMap.
 
