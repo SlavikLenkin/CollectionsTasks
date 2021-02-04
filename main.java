@@ -1,19 +1,19 @@
 package com.mycompany.collection;
 
-import com.mycompany.lecture.figures.Circle;
+import com.mycompany.lecture.figures.String;
 
 import java.util.LinkedList;
 import java.util.List;
 
 public class main {
     static int count = 10000;
-    static ILinkedList<Circle> myLinkedList = new MyLinkedList<>();
-    static List<Circle> javaLinkedList = new LinkedList<>();
+    static ILinkedList<String> myLinkedList = new MyLinkedList<>();
+    static List<String> javaLinkedList = new LinkedList<>();
     static long timeOfMyList;
     static long timeOfJavaList;
-    static Circle circle = new Circle(2, "red");
+    static String circle = new String(2, "red");
 
-    public static void main(String[] args) {
+    public static void main(java.lang.String[] args) {
         testAdd();
         testGetByIndex();
         testRemove();
@@ -26,7 +26,7 @@ public class main {
             myLinkedList.add(circle);
         }
         System.out.println(myLinkedList);
-        myLinkedList.set(2, new Circle(4, "green"));
+        myLinkedList.set(2, new String(4, "green"));
         System.out.println(myLinkedList);
         System.out.println(myLinkedList.indexOf(circle));
         System.out.println(myLinkedList.get(2));
@@ -34,9 +34,25 @@ public class main {
         System.out.println(myLinkedList);
         myLinkedList.clear();
         System.out.println(myLinkedList);
+
+
+        MyLinkedList<Integer> listInt = new MyLinkedList<>();
+        listInt.add(1);
+        listInt.add(2);
+        listInt.add(3);
+        listInt.add(4);
+
+        Integer list2[] = new Integer[listInt.size()];
+
+        list2 = listInt.toArray(list2);
+
+        System.out.println(list2.length);
+        for (int elem:list2) {
+            System.out.println(elem);
+        }
     }
 
-    public static void print(String operation) {
+    public static void print(java.lang.String operation) {
         System.out.println(operation);
         System.out.println("timeOfMyList " + timeOfMyList / 1000000 + " ms");
         System.out.println("timeOfCustomList " + timeOfJavaList / 1000000 + " ms");

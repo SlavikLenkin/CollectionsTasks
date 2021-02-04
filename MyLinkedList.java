@@ -121,9 +121,20 @@ public class MyLinkedList<E> implements ILinkedList<E> {
     }
 
     @Override
-    public  <T> T[] toArray(T[] a) {
+    public <T> T[] toArray(T[] a) {
+        if (a.length != size) {
+            return  (T[]) java.lang.reflect.Array.newInstance(a.getClass().getComponentType(), size);
+        }
+        int i = 0;
+        Object[] result = a;
+        for (E x : this ) {
+            result[i++] = x;
+        }
+        if (a.length > size)
+            a[size] = null;
         return a;
     }
+
 
     @Override
     public MyIterator<E> iterator() {

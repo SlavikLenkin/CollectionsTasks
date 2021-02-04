@@ -1,6 +1,6 @@
 package com.mycompany.collection;
 
-public interface ILinkedList<E> extends Iterable {
+public interface ILinkedList<E> extends Iterable<E> {
 
     void add(E element);
 
@@ -18,7 +18,7 @@ public interface ILinkedList<E> extends Iterable {
 
     int size();
 
-    <T> T[] toArray(T[] a);
+    <T>T[] toArray(T[] a);
 
     String toString();
 
